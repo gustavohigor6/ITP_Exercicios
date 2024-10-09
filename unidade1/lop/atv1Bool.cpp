@@ -1,27 +1,24 @@
 #include <iostream>
 using namespace std;
 
-//Divida a por b se for divisível
-
 int main () {
-    //Ler dois numeros inteiros a e b
-    int a, b;
+    // Recebe três números inteiros como os tamanhos dos três lados de um triângulo
+    int lado1, lado2, lado3;
 
-    cin >> a;
-    cin >> b;
+    cin >> lado1;
+    cin >> lado2;
+    cin >> lado3;
 
-    //Somente no caso de b dividir a, escreva na tela "Resultado:" e o resultado da divisao
-
-    int operacao1, operacao2;
-
-    operacao1 = a % b;
-    operacao2 = a / b;
-
-    if (operacao1 == 0) {
-        cout << "Resultado: " << operacao2 << endl;
-    }
-    else {
-
+    int soma1, soma2, soma3;
+    
+    soma1 = lado2 + lado3;
+    soma2 = lado1 + lado3;
+    soma3 = lado1 + lado2;
+    
+    if ((lado1 < soma1) && (lado2 < soma2) && (lado3 < soma3)){
+        cout << "possivel" << endl;
+    } else {
+        cout << "impossivel" << endl;
     }
     return 0;
 }
