@@ -13,7 +13,7 @@ int main () {
 
     cin >> trilhasRealizadas;
 
-    if (trilhasRealizadas == 0 || (trilhasRealizadas > 0 && trilhasRealizadas <= 5)) {
+    if (trilhasRealizadas == 0 || (trilhasRealizadas > 0 && trilhasRealizadas < 5)) {
         cout << "Iniciante" << endl;
     }
     else {
