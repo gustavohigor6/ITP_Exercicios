@@ -18,8 +18,8 @@ int main () {
     do
     {
         aux = (num % 10);
-        soma = (soma + aux);
-        num = (num / 10);
+        soma += aux;
+        num /= 10;
     } while (num != 0);
     
 
