@@ -18,6 +18,7 @@ int main () {
     cin >> num1 >> num2 >> num3 >> num4 >> num5;
 
     // Como fazer esse programa por estruturas de repetição?
+    // Gustavo, você é um tosco por ter feito esse código KKKKKKKKKK
 
     if (num1 < 0) negativo++;
     if (num2 < 0) negativo++;
