@@ -11,40 +11,36 @@ mensagem por linha (utilizar o "\n"), exatamente na sequência "valores pares",
 o número 0 é considerado par. */
 
 int main () {
-    int num1, num2, num3, num4, num5;
-    int par = 0, impar = 0, positivo = 0, negativo = 0;
-    // int calculoPar, calculoImpar;
+    int par, impar, positivo, negativo, num, contador;
+    
+    par = 0;
+    impar = 0;
+    positivo = 0;
+    negativo = 0;
+    contador = 0;
 
-    cin >> num1 >> num2 >> num3 >> num4 >> num5;
+    while (contador < 5) {
+        cin >> num;
 
-    // Como fazer esse programa por estruturas de repetição?
-    // Gustavo, você é um tosco por ter feito esse código KKKKKKKKKK
+        if (num < 0) {
+            negativo++;;
+        } else {
+            if (num > 0) {
+                positivo++;
+            }
+        }
 
-    if (num1 < 0) negativo++;
-    if (num2 < 0) negativo++;
-    if (num3 < 0) negativo++;
-    if (num4 < 0) negativo++;
-    if (num5 < 0) negativo++;
-
-    if (num1 > 0) positivo++;
-    if (num2 > 0) positivo++;
-    if (num3 > 0) positivo++;
-    if (num4 > 0) positivo++;
-    if (num5 > 0) positivo++;
-
-    if ((num1 % 2) == 0 || (num1 == 0)) par++;
-    if ((num2 % 2) == 0 || (num2 == 0)) par++;
-    if ((num3 % 2) == 0 || (num3 == 0)) par++;
-    if ((num4 % 2) == 0 || (num4 == 0)) par++;
-    if ((num5 % 2) == 0 || (num5 == 0)) par++;
-
-    if ((num1 % 2) != 0) impar++;
-    if ((num2 % 2) != 0) impar++;
-    if ((num3 % 2) != 0) impar++;
-    if ((num4 % 2) != 0) impar++;
-    if ((num5 % 2) != 0) impar++;
-
-    cout << par << " valores pares" << "\n" << impar << " valores impares" << "\n" << positivo << " valores positivos" << "\n" << negativo << " valores negativos" << endl;
+        if ((num % 2) == 0 || num == 0) {
+            par++;
+        } else {
+            if ((num % 2) != 0) {
+                impar++;
+            }
+        }
+        contador++;
+    }
+    
+    cout << par << " valores pares" "\n" << impar << " valores impares" "\n" << positivo << " valores positivos" "\n" << negativo << " valores negativos" << endl;  
 
     return 0;
 }
