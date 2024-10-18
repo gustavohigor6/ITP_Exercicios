@@ -11,7 +11,33 @@ tela todos os números perfeitos menores que n*/
 
 int main ()
 {
+    int num, divisores, calculo, aux;
+    
+    aux = 6;
+    cin >> num;
 
+    do
+    {
+        divisores = 0;
 
+        for (int i = 1; i < aux; i++)
+        {
+            calculo = (aux % i);
+
+            if (calculo == 0)
+            {
+                divisores += i;
+            }
+        }
+
+        if (divisores == aux)
+        {
+            cout << divisores << endl; 
+        }
+
+        aux++;
+
+    } while (aux <= num);
+    
     return 0;
 }
