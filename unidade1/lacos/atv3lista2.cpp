@@ -7,7 +7,20 @@ using namespace std;
 dos dígitos desse número. */
 
 int main () {
-  //Desenvolver a questão.
+  int num, contador, soma;
+
+  soma = 0;
+  cin >> num;
+
+  do
+  {
+    contador = (num % 10);
+    num /= 10;
+    soma += contador;
+
+  } while (num > 0);
+  
+  cout << soma << endl;
   
   return 0;
 }
