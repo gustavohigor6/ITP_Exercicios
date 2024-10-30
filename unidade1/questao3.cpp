@@ -16,28 +16,11 @@ int main()
     
     contador = 0;
 
-    if (valorT <= 10)
+    while (contador < 10)
     {
-        while (contador < 10)
-        {
-            for (int i = 0; i < valorT; i++)
-            {  
-                vetor[contador] = (i);
-                contador++;
-                if (contador == 10){
-                    break;
-                }
-            }
-        }
-
-    } 
-    else 
-    {   
-        contador = 0;
-
-        for (int i = 0; i < 10; i++)
-        {
-            vetor[i] = contador;
+        for (int i = 0; i < valorT && contador < 10; i++)
+        {  
+            vetor[contador] = (i);
             contador++;
         }
     }
