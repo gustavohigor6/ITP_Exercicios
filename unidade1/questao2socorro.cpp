@@ -14,7 +14,7 @@ A saída de dados consiste em um único valor inteiro indicando o tempo do jogo 
 
 int main ()
 {   
-    int T, O, P, ultimoObstaculo, ultimoPulo, primeiroPulo, bateu, naoBateu;
+    int T, O, P, ultimoObstaculo, ultimoPulo, primeiroPulo, bateu;
 
     cin >> T >> O >> P;
 
@@ -64,15 +64,18 @@ int main ()
     }
 // Conclusão da questão
     bateu = 0;
-    naoBateu = 0;
 
     for (int i = 0; i < (ultimoPulo); i++)
     {
-        if (obstaculos[i] == 1 && obstaculos[i] == saltos[i])
+        if (obstaculos[i] == 1 && obstaculos[i] == saltos[i] && saltos[i - 1] == 1)
         {
             bateu = (i + 1);
             break;
-        }
+        } else if (obstaculos[i] == 1 && saltos[i - 1] == 0)
+            {
+                bateu = (i + 1);
+                break;
+            }
     }
     if (bateu != 0)
     {
