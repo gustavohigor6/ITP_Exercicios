@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 
 using namespace std;
 
@@ -21,24 +21,44 @@ void upper(string &std)
     }
 }
 
-char busca(char string1[], char string2[])
+string busca(string str1, string str2)
 {
-    char resultado[100];
+    string resultado;
+    
     int k = 0;
-    for (int i = 0; string1[i] != '\0'; i++)
+    int tamanhoStr1 = str1.size();
+    int tamanhoStr2 = str2.size();
+    int x;
+    
+    for (int i = 0; i < tamanhoStr2; i++)
     {
-        for (int j = 0; string2[j] != '\0'; j++)
+        for (int j = 0; j < tamanhoStr1; j++)
         {
-            if (string1[i] == string2[j])
+            if (k != 0){
+                x = j;
+            }
+            if (str2[i] == str1[j])
             {
-                resultado[k] = string[i];
+                resultado[k] = str2[i];
+                cout << resultado << endl;
                 k++;
+                x = j;
                 break;
             }           
         }
     }
     return resultado;
 }
+
+int main(){
+    string s1 = "pessoal!";
+    string s2 = "pes";
+    cout << busca(s1, s2) << endl;
+
+    return 0;
+}
+// Entender o motivo do retorno ser a letra c.
+
 
 /*
 int main()
