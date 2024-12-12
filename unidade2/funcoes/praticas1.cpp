@@ -37,7 +37,20 @@ int busca(int x, int tamanho, int y[])
     }
     return -1;
 }
-
+// Escreva uma função para buscar um valor inteiro em um array de inteiros, 
+// retornando o índice quando encontrar, ou -1 quando não encontrar
+int busca_array(int numero, int tamanho_array, int array[])
+{
+    for (int i = 0; i < tamanho_array; i++)
+    {
+        if (array[i] == numero)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+/*
 int main()
 {
     /* Teste da prática 1 (maior)
@@ -60,5 +73,5 @@ int main()
     std::cout << busca(a, b, x) << std::endl;
     */
 
-    return 0;
-}
+//    return 0;
+// }
