@@ -53,6 +53,15 @@ int** matriz_identidade(int &linhas, int &colunas)
     return matriz;
 }
 
+void desaloca_matriz(int **matriz, int lin)
+{
+    for (int i = 0; i < lin; i++)
+    {
+        delete[] matriz[i];
+    }
+    delete[] matriz;
+}
+
 int main () 
 {
 /*
@@ -64,7 +73,7 @@ int main ()
     {
         cout << ponteiro[i] << endl;
     }
-    delete ponteiro;
+    delete[] ponteiro;
 */
 /*
     // Testando a prática 2: soma de arrays;
@@ -78,8 +87,11 @@ int main ()
     {
         cout << soma[i] << endl;
     }
+
+    delete[] = soma;
 */
-    int* matriz = matriz_identidade(3, 3);
+    int lin = 3, col = 3;
+    int** matriz = matriz_identidade(lin, col);
 
     for (int i = 0; i < 3; i++)
     {
@@ -89,4 +101,7 @@ int main ()
         }
         cout << endl;
     }
+    desaloca_matriz(matriz, 3);
+
+    return 0;
 }
