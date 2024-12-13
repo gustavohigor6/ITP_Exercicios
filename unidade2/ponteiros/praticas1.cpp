@@ -88,7 +88,7 @@ int main ()
         cout << soma[i] << endl;
     }
 
-    delete[] = soma;
+    delete[] soma;
 */
     int lin = 3, col = 3;
     int** matriz = matriz_identidade(lin, col);
